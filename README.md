@@ -60,7 +60,25 @@ The API endpoint require a "get" request to be made which is already made mandat
 
 The instructions were to make API calls to grab random 5 quotes.
 
+### API Endpoints
 
+1) GET <define your localhost with port/virtual domain>/api/avrillo/quotes - get random 5 quotes
+
+    Parameters required
+
+    ```bash
+    Param : api_token
+    Value : p2lbgWkFrykA4QyUmpHihzmc5BNzIABq
+    ```
+
+2) GET <define your localhost with port/virtual domain>/api/avrillo/refresh-quotes - refresh and get next random 5 quotes
+
+    Parameters required
+
+    ```bash
+    Param : api_token
+    Value : p2lbgWkFrykA4QyUmpHihzmc5BNzIABq
+    ```
 
 ## Test case
 
