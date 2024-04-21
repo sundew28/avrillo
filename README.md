@@ -26,7 +26,7 @@ Via Composer
 $ composer install
 ```
 
-I have setup an API key fo the purpose of the code test for use which is basic but will validate aganist the request API key being sent to the application.
+I have setup an API key for the purpose of the code test for use which is basic but will validate aganist the request API key being sent to the application.
 A simple middleware is setup for this purpose to validate the key in the api routes.
 
 ```bash
@@ -37,15 +37,11 @@ You can use the above key while testing the api endpoints.
 
 ## Security
 
-For API authentication / security i have implemented the JWT auth instead of using sanctum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
+For API authentication / security i have implemented a simple token authentication while making calls to th endpoints to grab random quotes. A default API key is etup for use as mentioned above. You will need to send this in your postman as query param as below. The key is already set in the .env file for you to use. If not a proper key is passed you will encounter a 'unauthorized' message.
 
-Your JWT authentication key is already set in the .env or enviorment file.
-
-Check your .env file if the secret key is generated with hash alogorithm, an example like below
 ```
-JWT_SECRET=AYBKioTi6AOI1EOEMJkmrH8vHDquUnmot4ff6w7d4XBB3WC93ceqmSMJAtW8kxco
-
-JWT_ALGO=HS256
+Param : api_token
+Value : p2lbgWkFrykA4QyUmpHihzmc5BNzIABq
 
 ```
 
