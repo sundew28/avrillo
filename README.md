@@ -34,10 +34,17 @@ $ API-KEY : p2lbgWkFrykA4QyUmpHihzmc5BNzIABq
 ```
 You can use the above key while testing the api endpoints.
 
+## ENV file
+
+I have set the default API driver and URL in the .env for easy testing of the application
+```bash
+API_DRIVER=kanye
+API_DEFAULT_URL=https://api.kanye.rest
+```
 
 ## Security
 
-For API authentication / security i have implemented a simple token authentication while making calls to th endpoints to grab random quotes. A default API key is etup for use as mentioned above. You will need to send this in your postman as query param as below. The key is already set in the .env file for you to use. If not a proper key is passed you will encounter a 'unauthorized' message.
+For API authentication / security i have implemented a simple token authentication while making calls to th endpoints to grab random quotes. A default API key is setup for use as mentioned above. You will need to send this in your postman as query param as below. The key is already set in the .env file for you to use. If not a proper key is passed you will encounter an 'unauthorized' message.
 
 ```
 Param : api_token
