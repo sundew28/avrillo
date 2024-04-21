@@ -44,7 +44,7 @@ API_DEFAULT_URL=https://api.kanye.rest
 
 ## Security
 
-For API authentication / security i have implemented a simple token authentication while making calls to th endpoints to grab random quotes. A default API key is setup for use as mentioned above. You will need to send this in your postman as query param as below. The key is already set in the .env file for you to use. If not a proper key is passed you will encounter an 'unauthorized' message.
+For API authentication / security i have implemented a simple token authentication while making calls to the endpoints to grab random 5 quotes. A default API key is setup for use as mentioned above. You will need to send this in your postman as query param as below. The key is already set in the .env file for you to use. If not a proper key is passed you will encounter an 'unauthorized' message.
 
 ```
 Param : api_token
@@ -74,5 +74,4 @@ php artisan test
 - I would like to make improvement to the error capturing by making use of error handler in laravel, make use of JsonResponse error handling
 - Check the quality of code by using tools like PHPsniffer, PHP-CS-Fixer with PSR2 and Symfony standards (much extra checks, closer to Laravel than PSR2).
 - Writing unit tests and feature tests to ensure API functionality better. The current test is just basics.
-- I have used the repository design pattern for this API development. We can use the Laravel manager/builder design pattern based on requirement.
 - Adding caching(redis) service for better performance.
