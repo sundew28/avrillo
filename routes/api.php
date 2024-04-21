@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
+use App\Enums\QuotesEnum;
+use App\Http\Controllers\Api\Quotes;
+use App\Http\Controllers\Api\RefreshQuotes;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +20,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::middleware(['api_token'])
+    ->prefix(QuotesEnum::AVRILLO->value)
+    ->group(function () {
+        Route::get('/quotes', Quotes::class);
+        Route::get('/refresh-quotes', RefreshQuotes::class);
 });
