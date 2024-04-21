@@ -1,7 +1,7 @@
 # Avrillo Code Test
 
 An application to send API request and receive response as JSON. I have used laravel 10 framework to create the application and a basic token authentication.
-To make api calls to https://api.kanye.rest/
+To make api calls to https://api.kanye.rest/. I have implemented the Laravel manager design pattern in the application and seperated the api call to Kanye seperate so that in future we can add different REST API's.
 
 ## Requirements
 
